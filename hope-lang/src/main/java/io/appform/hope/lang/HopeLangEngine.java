@@ -26,6 +26,7 @@ import io.appform.hope.core.functions.FunctionRegistry;
 import io.appform.hope.core.functions.HopeFunction;
 import io.appform.hope.core.visitors.Evaluator;
 import io.appform.hope.lang.parser.HopeParser;
+import java.io.Serializable;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.StringReader;
@@ -37,7 +38,7 @@ import java.util.Objects;
  * Top level accessor for hope. Creation is expensive. Create and reuse.
  */
 @Slf4j
-public class HopeLangEngine {
+public class HopeLangEngine implements Serializable {
     private final FunctionRegistry functionRegistry;
     private final ErrorHandlingStrategy errorHandlingStrategy;
 

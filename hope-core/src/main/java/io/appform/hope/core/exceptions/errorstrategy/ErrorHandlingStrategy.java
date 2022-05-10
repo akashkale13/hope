@@ -15,12 +15,13 @@
 package io.appform.hope.core.exceptions.errorstrategy;
 
 import io.appform.hope.core.exceptions.impl.HopeParameterValidationFailureError;
+import java.io.Serializable;
 
 /**
  * This class is called in error situations. This lets' users configure the behaviour in scenarios where these
  * scenarios appear.
  */
-public interface ErrorHandlingStrategy {
+public interface ErrorHandlingStrategy extends Serializable {
 
     /**
      * This handler is invoked when a value cannot be resolved from a path.

@@ -17,6 +17,7 @@ package io.appform.hope.core.functions;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
 import io.appform.hope.core.Value;
+import java.io.Serializable;
 import lombok.Builder;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -36,7 +37,7 @@ import java.util.stream.Collectors;
  * A global registry of functions provided by library as well as registered by user.
  */
 @Slf4j
-public class FunctionRegistry {
+public class FunctionRegistry implements Serializable {
 
     @Data
     @Builder
